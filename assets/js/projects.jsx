@@ -5,6 +5,8 @@ import imgRelogioDigital from "../img/imgProjetos/relogio-digital.png";
 import imgCronometro from "../img/imgProjetos/cronometro.png";
 import imgJuros from "../img/imgProjetos/juros.png";
 import imgCardJs from "../img/imgProjetos/card-js.png";
+import imgBlog from "../img/imgProjetos/blog.png";
+import imgGeradorSenha from "../img/imgProjetos/geradorSenha.png";
 
 const listaProjetos = [
     {
@@ -76,6 +78,26 @@ const listaProjetos = [
         urlProjeto: "https://github.com/mario-leandro/card-js",
         urlSite: "https://mario-leandro.github.io/card-js/",
         icon1: <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>,
+    },
+    {
+        id: 8,
+        nomeProjeto: "Blog",
+        imgProjeto: imgBlog,
+        urlProjeto: "https://github.com/mario-leandro/blog",
+        urlSite: "https://blog-ml.vercel.app/",
+        icon1: <img width="48" height="48" src="https://img.icons8.com/officel/48/react.png" alt="react"/>,
+        icon2: <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>,
+        icon3: <img width="48" height="48" src="https://img.icons8.com/color/48/sass-avatar.png" alt="sass-avatar"/>
+    },
+    {
+        id: 9,
+        nomeProjeto: "Gerador de Senha",
+        imgProjeto: imgGeradorSenha,
+        urlProjeto: "https://github.com/mario-leandro/password-generator-js",
+        urlSite: "https://mario-leandro.github.io/password-generator-js/",
+        icon1: <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1"/>,
+        icon2: <img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="css3"/>,
+        icon3: <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>
     }
 ];
 

@@ -12,6 +12,7 @@ export default function Main() {
                     <Image
                         src={minhaFoto}
                         alt="Foto de perfil"
+                        loading="lazy"
                     />
                 </div>
 
@@ -103,7 +104,7 @@ export default function Main() {
                         <div className="curriculo">
                             <h3>Veja meu currículo</h3>
                             <Link
-                                href="https://drive.google.com/file/d/1DLLJCvMn1OIxR_qRcbT1b-CfDuVD5sFC/view?usp=drive_link"
+                                href="https://drive.google.com/file/d/1XQ0VEy9BAVrMja8ri3jMHlGK2pqS_2aW/view?usp=drive_link"
                                 target="_blank"
                             >
                                 Clique aqui para abrir o curriculo

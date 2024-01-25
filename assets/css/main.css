@@ -35,7 +35,6 @@ main {
 }
 
 .principal .apresentacao {
-    height: 500px;
     margin: .8em;
     display: flex;
     flex-direction: row;
@@ -169,8 +168,8 @@ main {
 }
 
 .card-icon img {
-    width: 76px;
-    height: 76px;
+    width: 48px;
+    height: 48px;
 }
 
 .card .card-nome {
