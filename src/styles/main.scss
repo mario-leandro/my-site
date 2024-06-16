@@ -1,0 +1,691 @@
+/*
+    Here we will import the variables file to use the colors
+    This will be more organized and easy to maintain the code
+*/
+@import "_variables.scss";
+
+/* 
+    This is the main style of the page
+    Here we will to use the dvw and dvh units to make the page responsive
+    and we will to use the flexbox to organize the content of the page
+*/
+main {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // This main-container class is used to style the main content of the page
+    // and add the responsivity to the page
+    .main-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        
+        // This apresentation class is used to style the first section of the page
+        .apresentation {
+            width: 100%;
+            height: 100dvh;
+            background: $bg-primary-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            /*
+                This title class is used to style the title of the section
+                all the text will be in the center of the page
+                and the font-size will be 2rem for more visibility to the user
+                OBS: The font-size will be replaced in the titles of the other sections
+            */
+            .text {
+                width: 100%;
+                margin-bottom: .7rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                // Here will be animations soon
+                p {
+                    color: $font-primary-color;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+            }
+
+            .social {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    margin: 0 .2rem;
+
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                        fill: $fill-svg-color;
+
+                        &:hover {
+                            fill: $fill-svg-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        // This about class is used to style the second section of the page
+        // Here we will to use the flexbox to organize the content of the page
+        .about {
+            width: 100%;
+            min-height: 100dvh;
+            padding: 2rem;
+            background: $bg-tertiary-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            // The titleAbout class is used to style the title of the section
+            .titleAbout {
+                width: 100%;
+                height: 10%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h2 {
+                    color: $font-primary-color;
+                    font-size: 1.7rem;
+                    font-weight: 700;
+                }
+            }
+
+            // The text and image will be in separate divs
+            // and the text will be in the left side and the image in the right side
+            .text-img {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                align-items: center;
+                
+                .textAbout {
+                    min-width: 200px;
+                    max-width: 400px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        color: $font-primary-color;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                }
+                
+                .imgAbout {
+                    min-width: 200px;
+                    max-width: 400px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        aspect-ratio: 4/3;
+                    }
+                }
+            }
+        }
+
+        // This knowledge class is used to style the third section of the page
+        // Here will be the technologies that I know
+        // OBS: Don't worry if it's disorganized, I will organize it soon by categories
+        .knowledge {
+            width: 100%;
+            min-height: 100dvh;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .titleKnowledge {
+                width: 100%;
+                height: 20%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h2 {
+                    color: $font-primary-color;
+                    font-size: 1.7rem;
+                    font-weight: 700;
+                }
+            }
+
+            // The textKnowledge, i don't know if i will use it yet
+            // but I will let it here for now
+            .textKnowledge {
+                width: 100%;
+                height: 10%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    color: $font-primary-color;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+            }
+
+            // The knowledge-container class is used to style the container of the technologies
+            // Here will be the cards with the technologies that I know
+            // I add the cards for more organization and to make the responsivity easier
+            .knowledge-container {
+                width: 100%;
+                height: calc(100% - 30%);
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+
+                .knowledge-card {
+                    width: 130px;
+                    height: 130px;
+                    padding: 1.2em;
+                    margin: .6rem 1.2em;
+                    background: rgba(222, 222, 222, 0.402);
+                    box-shadow: 1.88px 3.45px 8px rgba(0 , 0, 0, .4);
+                    border-radius: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .icon {
+                        width: 100%;
+                        height: 150px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 48px;
+                            height: 48px;
+                        }
+                    }
+
+                    .name-tech {
+                        width: 100%;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            color: $font-primary-color;
+                            font-size: 1rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+        /*
+            This projects class is used to style the fourth section of the page
+            Here will be the projects that I made in the past
+            OBS: Here are some projects I did when I started
+            and I will add more projects soon to show my evolution
+        */
+        .projects {
+            width: 100%;
+            min-height: 100dvh;
+            padding: 2rem;
+            background: $bg-tertiary-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            .titleProjects {
+                width: 100%;
+                height: 15%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h2 {
+                    color: $font-primary-color;
+                    font-size: 1.7rem;
+                    font-weight: 700;
+                }
+            }
+            
+            // The projects-container class is used to style the container of the projects
+            .projects-container {
+                width: 100%;
+                height: calc(100% - 15%);
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: flex-start;
+                
+                /*
+                    I use cards to organize the projects and make the responsivity easier.
+                    I was thinking about using a carousel to show the projects
+                    and create another page to show the details of the projects and show more projects
+                    but I will let it for later
+                */
+                .card {
+                    width: 300px;
+                    height: 350px;
+                    padding: 1.2em;
+                    margin: 1.2em;
+                    background: $bg-primary-color;
+                    box-shadow: $box-shadow-primary;
+                    border-radius: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    .card-image {
+                        width: 100%;
+                        height: 150px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    
+                    .card-body {
+                        width: 100%;
+                        height: calc(100% - 150px);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;
+
+                        .card-name {
+                            width: 100%;
+                            height: calc(100% - 50px);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            h2 {
+                                color: $font-primary-color;
+                                font-size: 1.3rem;
+                                font-weight: 700;
+                            }
+                        }
+
+                        .card-buttons {
+                            width: 100%;
+                            height: calc(100% - 50px);
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-evenly;
+                            align-items: center;
+
+                            /*
+                                I use the a tag to simulate a button
+                                and I will use the router to navigate to the project details
+                                and show more projects.
+                                OBS: This may contain projects that are not online yet
+                            */
+                            a {
+                                width: calc(50% - 1rem);
+                                height: calc(100% - 1rem);
+                                padding: 0 1rem;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border: none;
+                                border-radius: 5px;
+                                background: $bg-tertiary-color;
+                                color: $font-primary-color;
+                                border: 1px solid $font-primary-color;
+                                font-size: .93rem;
+                                font-weight: 700;
+                                cursor: pointer;
+                            }
+
+                            a:hover {
+                                background: $bg-hover-color;
+                                color: $font-tertiary-color;
+                                border: 1px solid transparent;
+                            }
+                        }
+
+                        .card-icons {
+                            width: 100%;
+                            height: calc(100% - 50px);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+
+            // The buttonProjects class is used to style the button to show more projects
+            .buttonProjects {
+                width: 100%;
+                height: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                button {
+                    width: 200px;
+                    height: 50px;
+                    padding: .7rem;
+                    border: none;
+                    border-radius: 5px;
+                    background: $bg-tertiary-color;
+                    color: $font-primary-color;
+                    border: 1px solid $font-primary-color;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    background: $bg-hover-color;
+                    color: $font-tertiary-color;
+                    border: 1px solid transparent;
+                }
+            }
+        }
+
+        // This contact class is used to style the fifth section of the page
+        // Here will be the contact form to send me a message
+        .contact {
+            width: 100%;
+            height: 100dvh;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .titleContact {
+                width: 100%;
+                height: 15%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h2 {
+                    color: $font-primary-color;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+            }
+
+            .contact-container {
+                width: 100%;
+                height: 85%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                /*
+                    The contactForm class is used to style the form
+                    Here I use the flexbox to organize the form
+                    and I use the label tag to identify the inputs
+                    and the button tag to send the message
+                */
+                .contactForm {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .inputs {
+                        width: 90%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        label {
+                            color: $font-primary-color;
+                            font-size: 1rem;
+                            font-weight: 700;
+                        }
+
+                        input {
+                            width: 100%;
+                            height: 40px;
+                            padding: 0 1rem;
+                            margin: .5rem 0;
+                            border: 1px solid $font-primary-color;
+                            border-radius: 5px;
+                            background: transparent;
+                            color: $font-primary-color;
+                            font-size: 1rem;
+                            font-weight: 700;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            height: 250px;
+                            padding: 1rem;
+                            margin: .5rem 0;
+                            border: 1px solid $font-primary-color;
+                            border-radius: 5px;
+                            background: transparent;
+                            color: $font-primary-color;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            resize: none;
+                        }
+
+                        *::placeholder {
+                            color: $placeholder-text-color;
+                        }
+                    }
+
+                    .button {
+                        width: 90%;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        button {
+                            width: 100%;
+                            padding: .7rem;
+                            border: none;
+                            border-radius: 5px;
+                            background: $bg-tertiary-color;
+                            color: $font-primary-color;
+                            border: 1px solid $font-primary-color;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            cursor: pointer;
+                        }
+
+                        button:hover {
+                            background: $bg-hover-color;
+                            color: $font-tertiary-color;
+                            border: 1px solid transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        .main-container {
+            .apresentation {
+                .text {
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .social {
+                    a {
+                        svg {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                }
+            }
+
+            .about {
+                .titleAbout {
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .text-img {
+                    .textAbout {
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            .knowledge {
+                .titleKnowledge {
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .textKnowledge {
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .knowledge-container {
+                    .knowledge-card {
+                        width: 100px;
+                        height: 100px;
+
+                        .icon {
+                            img {
+                                width: 40px;
+                                height: 40px;
+                            }
+                        }
+
+                        .name-tech {
+                            p {
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .projects {
+                .titleProjects {
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .projects-container {
+                    .card {
+                        .card-body {
+                            .card-name {
+                                h2 {
+                                    font-size: 1.2rem;
+                                }
+                            }
+
+                            .card-buttons {
+                                a {
+                                    font-size: .8rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .buttonProjects {
+                    button {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .contact {
+                .titleContact {
+                    h2 {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .contact-container {
+                    .contactForm {
+                        .inputs {
+                            label {
+                                font-size: .8rem;
+                            }
+
+                            input {
+                                font-size: .8rem;
+                            }
+
+                            textarea {
+                                font-size: .8rem;
+                            }
+                        }
+
+                        .button {
+                            button {
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

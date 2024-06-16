@@ -1,0 +1,148 @@
+@import "_variables.scss";
+
+main {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .main-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .allProjectsDiv {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            
+            .titleProjects {
+                width: 100%;
+                height: 10%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2rem;
+
+                h2 {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: $font-primary-color;
+                }
+            }
+
+            .projects-container {
+                width: 100%;
+                height: 90%;
+                // display: grid;
+                // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                // grid-gap: 1rem;
+                // justify-content: center;
+                // align-items: center;
+                // padding: 1rem;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: flex-start;
+
+                .card {
+                    width: 300px;
+                    height: 350px;
+                    padding: 1.2em;
+                    margin: 1.2em;
+                    background: $bg-primary-color;
+                    box-shadow: $box-shadow-primary;
+                    border-radius: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    .card-image {
+                        width: 100%;
+                        height: 150px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    
+                    .card-body {
+                        width: 100%;
+                        height: calc(100% - 150px);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;
+
+                        .card-name {
+                            width: 100%;
+                            height: calc(100% - 50px);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            h2 {
+                                color: $font-primary-color;
+                                font-size: 1.3rem;
+                                font-weight: 700;
+                            }
+                        }
+
+                        .card-buttons {
+                            width: 100%;
+                            height: calc(100% - 50px);
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-evenly;
+                            align-items: center;
+
+                            a {
+                                width: calc(50% - 1rem);
+                                height: calc(100% - 1rem);
+                                padding: 0 1rem;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border: none;
+                                border-radius: 5px;
+                                background: $bg-tertiary-color;
+                                color: $font-primary-color;
+                                border: 1px solid $font-primary-color;
+                                font-size: .93rem;
+                                font-weight: 700;
+                                cursor: pointer;
+                            }
+
+                            a:hover {
+                                background: $bg-hover-color;
+                                color: $font-tertiary-color;
+                                border: 1px solid transparent;
+                            }
+                        }
+
+                        .card-icons {
+                            width: 100%;
+                            height: calc(100% - 50px);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
