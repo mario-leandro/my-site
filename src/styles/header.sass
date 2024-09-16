@@ -1,0 +1,157 @@
+@import "_variables.sass"
+
+header
+    width: 100%
+    height: 64px
+    background: $bg-slate-950
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+    .header-container
+        width: 95%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        
+        .header-content
+            width: 95%
+            height: 100%
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+
+            .header-mobile
+                width: auto
+                display: none
+
+                button
+                    background: transparent
+                    border: 2px solid $bg-slate-50
+                    border-radius: 5px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+
+                #mobileIconOpen
+                    display: flex
+
+                #mobileIconClose
+                    display: none
+
+            .header-logo
+                width: auto
+                height: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+
+                a
+                    font-size: 18px
+                    font-weight: 700
+                    color: $text-slate-50
+                    letter-spacing: 1px
+
+            .header-nav
+                width: auto
+                height: 100%
+                display: flex
+                flex-direction: row
+                justify-content: center
+                align-items: flex-end
+
+                &.open
+                    display: flex
+
+                .nav-list
+                    width: auto
+                    height: 100%
+                    display: flex
+                    flex-direction: row
+                    justify-content: center
+                    align-items: center
+
+                    .nav-item
+                        width: auto
+                        height: 100%
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        margin: 0 10px
+                        gap: 10px
+
+                        .nav-link
+                            font-size: 14px
+                            font-weight: 500
+                            color: $text-slate-50
+                            letter-spacing: 1px
+                            padding: 8px
+                            border-radius: 10px
+
+                            &:hover
+                                background: $bg-slate-600
+                                color: $text-slate-50
+                                transition: all 0.3s
+
+                        .btn
+                            width: auto
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            padding: 8px 16px
+                            margin-left: 5px
+                            background: $bg-slate-600
+                            color: $text-slate-50
+                            font-size: 14px
+                            border-radius: 10px
+
+                            &:hover
+                                transform: scale(1.05)
+                                transition: all 0.3s
+
+                            &:active
+                                transform: scale(0.95)
+                                transition: all 0.3s
+                                
+@media screen and ( max-width: 850px )
+    header
+        .header-container
+            .header-content
+                .header-nav
+                    width: 150px
+                    height: auto
+                    background: $bg-slate-950
+                    display: none
+                    flex-direction: column
+                    justify-content: space-between
+                    align-items: center
+                    position: absolute
+                    top: 64px
+                    right: 0
+                    z-index: 1
+                    border-radius: 0 0 10px 10px
+
+                    .nav-list
+                        width: 100%
+                        height: 100%
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-between
+                        align-items: center
+
+                        .nav-item
+                            width: 100%
+                            height: auto
+                            display: flex
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+                            margin: 10px 0
+                            gap: 10px
+
+                .header-mobile
+                    display: flex
+

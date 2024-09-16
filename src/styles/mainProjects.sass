@@ -1,0 +1,152 @@
+@import "_variables.sass"
+
+main
+    width: 100%
+    min-height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    .main-container
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        
+        .main-content
+            width: 100%
+            min-height: 100%
+            padding: 20px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+            .main-title
+                width: 100%
+                height: 100px
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+
+                h1
+                    font-size: 30px
+                    font-weight: 700
+                    color: $text-slate-50
+                    letter-spacing: 1px
+            
+            .projects-content
+                width: 100%
+                height: calc( 100% - 100px )
+                display: flex
+                flex-flow: row wrap
+                justify-content: center
+                align-items: center
+                gap: 15px
+
+                .project
+                    width: 500px
+                    min-height: 500px
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: center
+                    background-color: $bg-slate-950
+                    border-radius: 10px
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2)
+
+                    .project-image
+                        width: 100%
+                        height: 200px
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+
+                        img
+                            width: 100%
+                            height: 100%
+                            border-radius: 10px 10px 0 0
+                            object-fit: cover
+                            aspect-ratio: 4/3
+
+                    .project-info
+                        width: 100%
+                        min-height: calc( 100% - 300px )
+                        padding: 10px
+                        display: flex
+                        flex-direction: column
+                        justify-content: flex-start
+                        align-items: center
+
+                        .project-name
+                            width: 100%
+                            height: 50px
+                            display: flex
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+
+                            h2
+                                font-size: 20px
+                                font-weight: 700
+                                color: $text-slate-50
+                                letter-spacing: 1px
+
+                        .project-description
+                            width: 100%
+                            min-height: 100px
+                            display: flex
+                            flex-direction: column
+                            justify-content: flex-start
+                            align-items: center
+
+                            p
+                                font-size: 16px
+                                font-weight: 400
+                                color: $text-slate-50
+                                letter-spacing: 1px
+
+                        .project-tecnologies
+                            width: 100%
+                            min-height: 50px
+                            display: flex
+                            flex-flow: row wrap
+                            justify-content: center
+                            align-items: center
+                            gap: 10px
+
+                            span
+                                padding: 5px 10px
+                                border: 1px solid $bg-slate-400
+                                color: $text-slate-50
+                                border-radius: 10px
+                                user-select: none
+
+                        .project-btns
+                            width: 100%
+                            height: 50px
+                            display: flex
+                            flex-direction: row
+                            justify-content: center
+                            align-items: center
+                            gap: 10px
+
+                            a
+                                width: auto
+                                padding: 8px 16px
+                                background: $bg-slate-600
+                                color: $text-slate-50
+                                border-radius: 10px
+
+                                &:hover
+                                    transform: scale(1.05)
+                                    transition: all 0.3s
+
+                                &:active
+                                    transform: scale(0.95)
+                                    transition: all 0.3s

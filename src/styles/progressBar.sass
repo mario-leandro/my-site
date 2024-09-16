@@ -1,0 +1,30 @@
+@import "_variables.sass"
+    
+.progressBar 
+    width: 100%
+    margin-bottom: 1.5rem
+    
+    .labelContainer 
+        display: flex
+        justify-content: space-between
+        margin-bottom: 0.5rem
+
+        .label 
+            font-weight: bold
+            color: $bg-slate-50
+
+
+        .percentage 
+            font-weight: bold
+            color: $bg-slate-50
+
+
+    .barContainer 
+        height: 10px
+        background-color: $bg-slate-50
+        border-radius: 5px
+        overflow: hidden
+
+        .bar 
+            height: 100%
+            transition: width 0.5s ease-in-out
