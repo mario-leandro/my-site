@@ -6,7 +6,6 @@ import SkillsTech from "@/components/skillsTech";
 import ProjectsPrincipal from "@/components/subfaces/projectsPrincipal";
 
 export default function Main() {
-    
     return (
         <main>
             <div className="main-container">
@@ -66,7 +65,7 @@ export default function Main() {
                         </div>
 
                         <div className="contact-content">
-                            <form action={process.env.EMAIL_FORMATT}>
+                            <form action="https://formsubmit.co/30a92fed5ba505a6a31cde2e9bb6f5d8" method="POST">
                                 <div className="form-group">
                                     <label htmlFor="name">Nome</label>
                                     <input type="text" name="name" id="name" required />

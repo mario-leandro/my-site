@@ -19,26 +19,30 @@ const MobileMenu = () => {
     }, []);
 
     const handleMenuOpen = () => {
-        navRef.current?.style.display = "flex";
-        menuOpen.current?.style.display = "none";
-        menuClose.current?.style.display = "flex";
+        if (navRef.current && menuOpen.current && menuClose.current) {
+            navRef.current.style.display = "flex";
+            menuOpen.current.style.display = "none";
+            menuClose.current.style.display = "flex";
 
-        navRef.current.addEventListener("click", (e) => {
-            if (e.target.tagName === "A") {
-                navRef.current?.style.display = "none";
-                menuOpen.current?.style.display = "flex";
-                menuClose.current?.style.display = "none";
-            }
-        });
-    }
+            navRef.current.addEventListener("click", (e) => {
+                if (e.target instanceof HTMLElement && e.target.tagName === "A") {
+                    navRef.current.style.display = "none";
+                    menuOpen.current.style.display = "flex";
+                    menuClose.current.style.display = "none";
+                }
+            });
+        }
+    };
 
     const handleMenuClose = () => {
-        navRef.current?.style.display = "none";
-        menuOpen.current?.style.display = "flex";
-        menuClose.current?.style.display = "none";
-    }
+        if (navRef.current && menuOpen.current && menuClose.current) {
+            navRef.current.style.display = "none";
+            menuOpen.current.style.display = "flex";
+            menuClose.current.style.display = "none";
+        }
+    };
 
     return { handleMenuOpen, handleMenuClose };
-}
+};
 
 export default MobileMenu;
